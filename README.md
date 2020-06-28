@@ -21,9 +21,9 @@
 ### Complexities 
 #### Big O Notation
  
- ### Algorthims 
- #### Sorting 
- #### Searching
- #### Graphs 
+### Algorthims 
+#### Sorting 
+#### Searching
+#### Graphs 
  
-#### Coding problems
+### Coding problems
