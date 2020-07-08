@@ -25,5 +25,13 @@
 #### Sorting 
 #### Searching
 #### Graphs 
+
+### Counting 
+#### Multiplication
+#### Permutation 
+#### Combination
+#### Sum 
+#### Probability
  
-### Coding problems
+### Mocking Interview with Coding problems
+
