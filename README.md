@@ -3,12 +3,12 @@
  
  ## Concepts Review
  
- ### Data  
+ ### 1. Data  
  #### Abstract Data Types
  #### Common Abstractions
  #### Data Structures
  
- ### Strategies for Algorithm Design 
+ ### 2. Strategies for Algorithm Design 
  #### Iteration
  #### Recursion
  #### Bruteforce
@@ -18,20 +18,21 @@
  #### Dynamic Programming 
  #### Branch and Bound 
  
-### Complexities 
+### 3. Complexities 
 #### Big O Notation
  
-### Algorthims 
+### 4. Algorthims 
 #### Sorting 
 #### Searching
 #### Graphs 
 
-### Counting 
+### 5. Counting 
 #### Multiplication
 #### Permutation 
 #### Combination
 #### Sum 
 #### Probability
  
-### Mocking Interview with Coding problems
+## Mocking Interview with Coding problems
+At the moment, a software developer or engineer comes to the show with his partner for the mock interview. 
 
