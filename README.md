@@ -34,5 +34,5 @@
 #### Probability
  
 ## Mocking Interview with Coding problems
-At the moment, a software developer or engineer comes to the show with his partner for the mock interview. 
+At the moment, a software developer or engineer comes to the show with his/her partner for the mock interview. 
 
