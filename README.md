@@ -1,7 +1,7 @@
 # Mock Interviews and Coding Problems for Software Engineers.
  Practicing Data Structures &amp; Algorithms, and System Design Problems
  
- ## Concepts Review
+ ## Suggested Topics
  
  ### 1. Data  
  #### Abstract Data Types
@@ -33,6 +33,6 @@
 #### Sum 
 #### Probability
  
-## Mocking Interview with Coding problems
-At the moment, a software developer or engineer comes to the show with his/her partner for the mock interview. 
-
+## Discussed Topics 
+1. String Data Type 
+2. LinkedList Data Structure
