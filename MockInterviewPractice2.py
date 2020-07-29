@@ -1,62 +1,59 @@
+# Introduction: 
+# You're working on a secret team solving coded transmissions.
+
+# Your team is scrambling to decipher a recent message, worried it's a plot to break into a major European National Cake Vault. 
+# The message has been mostly deciphered, but all the words are backward! Your colleagues have handed off the last step to you.
+
 # Question:
-# Write a function for reversing a linked list. Your function will have one input: the head of the list. Your function should return the new head of the list.
-
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# Bonus:
-# How would you answer this in place?
-
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------
+# Write a function reverse_words() that takes a message as a list of characters and reverses the order of the words in place. 
 
 # Tips: 
-# The most obvious edge cases are:
-# the list has 0 elements
-# the list has 1 element
-# We can reverse the list by changing the next pointer of each node. Each node's next pointer should point to the previous node.
-# a)  An in-place function modifies data structures or objects outside of its own stack frame (i.e.: stored on the process heap or in the stack frame of a 
-# calling function). Working in-place is a good way to save time and space. You should only use an in-place algorithm if you're space constrained or you're 
-# positive you don't need the original input anymore, even for debugging.
+# When writing your function, it’s safe to assume the message contains only letters and spaces, and all words are separated by one space.
+# a)  An in-place function modifies data structures or objects outside of its own stack frame (i.e.: stored on the process heap or in the stack frame of a calling function). 
+# Working in-place is a good way to save time and space. You should only use an in-place algorithm if you're space constrained or you're positive you don't need the original 
+# input anymore, even for debugging.
 
 # Careful: "In-place" does not mean "without creating any additional variables!". Rather, it means "without creating a new copy of the input." 
 
-# b) An out-of-place function doesn't make any changes that are visible to other functions. Usually, those functions copy any data structures or objects 
-# before manipulating and changing them. Generally, out-of-place algorithms are considered safer because they avoid side effects. 
-
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------
+# b) An out-of-place function doesn't make any changes that are visible to other functions. Usually, those functions copy any data structures or objects before 
+# manipulating and changing them. Generally, out-of-place algorithms are considered safer because they avoid side effects. 
 
 # Solution:
-# In one pass from head to tail of our input list, we point each node's next pointer to the previous item. 
+# We'll write a helper function reverse_characters() that reverses all the characters between a left_index and right_index. We use it to:
 
-# The order of operations is important here! We're careful to copy current_node.next into next before setting current_node.next to previous_node. Otherwise 
-# "stepping forward" at the end could actually mean stepping back to the previous_node!
+# Reverse all the characters in the entire message, giving us the correct word order but with each word backward.
+# Reverse the characters in each individual word.
+# [ ‘l’, ‘e’, ‘a’,’t’, ‘s’ ...
+
+message = [ 'c', 'a', 'k', 'e', ' ', 'p', 'o', 'u', 'n', 'd', ' ', 's', 't', 'e', 'a', 'l' ]
+
+def reverse_words(message):
+    # First we reverse all the characters in the entire message
+    reverse_characters(message, 0, len(message)-1)
+
+    # This gives us the right word order
+    # but with each word backward
+
+    # Now we'll make the words forward again
+    # by reversing each word's characters
+
+    # We hold the index of the *start* of the current word
+    # as we look for the *end* of the current word
+    current_word_start_index = 0
+
+    for i in range(len(message) + 1):
+        # Found the end of the current word!
+        if (i == len(message)) or (message[i] == ' '):
+            reverse_characters(message, current_word_start_index, i - 1)
+            # If we haven't exhausted the message our
+            # next word's start is one character ahead
+            current_word_start_index = i + 1
 
 
-class LinkedListNode(object):
-    def __init__(self, value):
-        self.value = value
-        self.next  = None
-
-def reverse(head_of_list):
-    current_node = head_of_list
-    previous_node = None
-    next_node = None
-
-    # Until we have 'fallen off' the end of the list
-    while current_node:
-        # Copy a pointer to the next element
-        # before we overwrite current_node.next
-        next_node = current_node.next
-
-        # Reverse the 'next' pointer
-        current_node.next = previous_node
-
-        # Step forward in the list
-        previous_node = current_node
-        current_node = next_node
-
-    return previous_node
-
-# ------------------------------------------------------------------------------------------------------------------------------------------------
-
-# Complexity:
-# O(n) time and O(1) space. We pass over the list only once, and maintain a constant number of variables in memory
+def reverse_characters(message, left_index, right_index):
+    # Walk towards the middle, from both sides
+    while left_index < right_index:
+        # Swap the left char and right char
+        message[left_index], message[right_index] = message[right_index],     message[left_index]
+        left_index  += 1
+        right_index -= 1

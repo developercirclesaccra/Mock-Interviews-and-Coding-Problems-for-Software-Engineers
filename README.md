@@ -1,7 +1,15 @@
 # Mock Interviews and Coding Problems for Software Engineers.
  Practicing Data Structures &amp; Algorithms, and System Design Problems
+
+ ## Directory Structure and File naming 
  
- ## Concepts Review
+We name each file in this format:  MockInterviewPractice[Week Number].[Language used for the solution] 
+With week one, we officially launched Mock Interviews and Coding Problems for Software Engineers program hence there was no practice questions. 
+
+Actual practices started from week 2.
+
+ 
+ ## Suggested Topics
  
  ### 1. Data  
  #### Abstract Data Types
@@ -33,6 +41,6 @@
 #### Sum 
 #### Probability
  
-## Mocking Interview with Coding problems
-At the moment, a software developer or engineer comes to the show with his/her partner for the mock interview. 
-
+## Discussed Topics 
+1. String Data Type 
+2. LinkedList Data Structure
