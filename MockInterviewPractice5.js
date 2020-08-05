@@ -31,7 +31,8 @@ function isBalancedBrackets(str) {
   }
   return stack.length === 0;
 }
-console.log(isBalancedBrackets('foo({})adfsdf'));
+console.log(isBalancedBrackets('function bar({console.log("eat")})'));
+console.log(isBalancedBrackets('function bar({console.log("eat"))'));
 
 function isBalancedBrackets(text) {
   const closingBracketsStack = [];
@@ -58,7 +59,9 @@ function isBalancedBrackets(text) {
   }
   return closingBracketsStack.length === 0;
 }
-console.log(isBalancedBrackets('foo({})adfsdf'));
+console.log(isBalancedBrackets('function bar({console.log("eat")})'));
+console.log(isBalancedBrackets('function bar({console.log("eat"))'));
+
 
 function isBalancedBrackets(str) {
   const OPENING = new Set(['[', '(', '{']);
@@ -83,4 +86,6 @@ function isBalancedBrackets(str) {
   }
   return stack.length === 0;
 }
-console.log(isBalancedBrackets('foo({})adfsdf'));
+console.log(isBalancedBrackets('function bar({console.log("eat"))'));
+console.log(isBalancedBrackets('function bar({console.log("eat")})'));
+
