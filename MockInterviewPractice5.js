@@ -8,6 +8,14 @@ Question:
 Create a function that serves as a linter for JavaScript which ensures that code structures are balanced specifically, code blocks starting with (, { and [.
 
  */
+
+/**
+ *
+ * @param {*} text
+ * Time Complexity  O(n)
+ * Space Complexity O(n)
+ */
+
 function isBalancedBrackets(str) {
   const OPENING = '[({';
   const CLOSING = '])}';
@@ -34,6 +42,12 @@ function isBalancedBrackets(str) {
 console.log(isBalancedBrackets('function bar({console.log("eat")})'));
 console.log(isBalancedBrackets('function bar({console.log("eat"))'));
 
+/**
+ *
+ * @param {*} text
+ * Time Complexity  O(n)
+ * Space Complexity O(n)
+ */
 function isBalancedBrackets(text) {
   const closingBracketsStack = [];
   for (let i = 0; i < text.length; i++) {
@@ -62,7 +76,12 @@ function isBalancedBrackets(text) {
 console.log(isBalancedBrackets('function bar({console.log("eat")})'));
 console.log(isBalancedBrackets('function bar({console.log("eat"))'));
 
-
+/**
+ *
+ * @param {*} text
+ * Time Complexity  O(n)
+ * Space Complexity O(n)
+ */
 function isBalancedBrackets(str) {
   const OPENING = new Set(['[', '(', '{']);
   const CLOSING = new Set([']', ')', '}']);
@@ -88,4 +107,3 @@ function isBalancedBrackets(str) {
 }
 console.log(isBalancedBrackets('function bar({console.log("eat"))'));
 console.log(isBalancedBrackets('function bar({console.log("eat")})'));
-
