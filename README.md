@@ -16,7 +16,7 @@ Actual practices started from week 2.
 - Array (covered)
 - Linked List (covered)
 - Stack (Covered)
-- Queue
+- Queue (Covered)
 - Priority Queue
 - Set
 - Map
