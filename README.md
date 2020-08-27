@@ -18,7 +18,7 @@ Actual practices started from week 2.
 - Stack (Covered)
 - Queue (Covered)
 - Priority Queue(Covered)
-- Set
+- Set(Covered)
 - Map
 - Trees
 - Graph
