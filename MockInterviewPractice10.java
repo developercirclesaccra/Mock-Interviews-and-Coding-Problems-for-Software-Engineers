@@ -1,6 +1,5 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.HashMap;
+import java.io.*;
+import java.util.*;
 
 
 //QUESTION
@@ -20,13 +19,14 @@ To make the problem easier, we provided a portion of the code in the editor. You
 Sample Input
 3
 uncle sam
-999122222
+99912222
 tom
-12299933
+11122222
 harry
 12299933
-james
-4556454
+uncle sam
+uncle tom
+harry
  
  
 Sample output
@@ -63,28 +63,51 @@ class Solution{
 
 
 
-class MockInterviewPractice10 {
-    public static void main(String [] args) throws Exception {
-        /* Read input and save as entries in a HashMap */
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.valueOf(br.readLine());
-        HashMap<String, Integer> map = new HashMap<>();
-        while (n-- > 0) {
-            String name = br.readLine();
-            int phone   = Integer.valueOf(br.readLine());
-            map.put(name, phone);
-        }
 
-        /* Read each query and check if its in our HashMap */
-        String s;
-        while((s = br.readLine()) != null) {
-            if (map.containsKey(s)) {
-                System.out.println(s + "=" + map.get(s));
-            } else {
-                System.out.println("Not found");
+
+public class Solution {
+//    Sample Input
+//    3
+//    uncle sam
+//    99912222
+//    tom
+//    11122222
+//    harry
+//    12299933
+//    uncle sam
+//    uncle tom
+//    harry
+
+    public static void main(String[] args) {
+        try {
+            int no_of_entries = 0;
+            int i = 0;
+            String name = null;
+            int number = 0;
+            String query = null;
+            HashMap<String, Integer> phoneBook = new HashMap<String, Integer>();
+            BufferedReader b = new BufferedReader(new InputStreamReader(
+                    System.in));
+            no_of_entries = Integer.parseInt(b.readLine());
+            while (i < no_of_entries) {
+                name = b.readLine();
+                number = Integer.parseInt(b.readLine());
+                phoneBook.put(name, number);
+                i++;
             }
+            while (!(query = b.readLine().trim()).isEmpty()) {
+                if (phoneBook.containsKey(query))
+                    System.out.println(query + "=" + phoneBook.get(query));
+                else
+                    System.out.println("Not found");
+            }
+        } catch (Exception e) {
+System.out.println(e);
         }
-
-        br.close();
     }
 }
+
+//    Sample output
+//    uncle sam=99912222
+//    Not found
+//    harry=12299933
