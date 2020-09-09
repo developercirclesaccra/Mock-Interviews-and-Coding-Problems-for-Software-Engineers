@@ -1,7 +1,3 @@
-import java.io.*;
-import java.util.*;
-
-
 //QUESTION
 /*You are given a phone book that consists of people's names and their phone number. After that you will be given some person's name as a query. For each query, print the phone number of that person.
 Input Format
@@ -35,8 +31,6 @@ Not found
 harry=12299933
  
  
- 
- 
  //starter code
 import java.util.*;
 import java.io.*;
@@ -61,22 +55,21 @@ class Solution{
 }*/
 
 
+//TO RUN:
+create a java project in your favourite ide.
+create a new class with name Solution.java.
+copy Solution class copy in this file your newly created Solution.java
+run the program file and copy the path to the input.txt file and paste in the console and press enter.
+
+//OR 
+copy Solution class code in this file.
+paste it https://www.hackerrank.com/challenges/phone-book/problem and run
 
 
-
+import java.io.*;
+import java.util.*;
 
 public class Solution {
-//    Sample Input
-//    3
-//    uncle sam
-//    99912222
-//    tom
-//    11122222
-//    harry
-//    12299933
-//    uncle sam
-//    uncle tom
-//    harry
 
     public static void main(String[] args) {
         try {
@@ -106,8 +99,3 @@ System.out.println(e);
         }
     }
 }
-
-//    Sample output
-//    uncle sam=99912222
-//    Not found
-//    harry=12299933
